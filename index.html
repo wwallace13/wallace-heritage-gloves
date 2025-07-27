@@ -4,71 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wallace Heritage Gloves</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f0e8;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fdf9f4;
       color: #2d1f1f;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
     header {
-      background-color: #7a2c2c;
+      background-color: #621c1c;
       color: white;
+      text-align: center;
       padding: 40px 20px;
     }
     header img {
-      width: 200px;
+      width: 160px;
       max-width: 90%;
       margin-bottom: 15px;
     }
     header h1 {
+      font-family: 'Playfair Display', serif;
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
     }
     header p {
       font-style: italic;
       margin-top: 10px;
+      font-size: 1.1em;
+    }
+    nav {
+      background-color: #471111;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
     .card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 500px;
       background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: left;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #621c1c;
+    }
+    .card p {
+      font-size: 0.95em;
     }
     .card img {
       width: 100%;
-      height: auto;
-      border-radius: 4px;
+      border-radius: 6px;
+      margin-bottom: 10px;
     }
     form {
-      max-width: 400px;
+      max-width: 500px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
     }
     input, textarea {
-      width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 15px;
-      border-radius: 5px;
+      border-radius: 6px;
       border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      background-color: #621c1c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    input[type="submit"]:hover {
+      background-color: #8b2f2f;
     }
     footer {
-      background-color: #4e1b1b;
+      background-color: #471111;
       color: white;
+      text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
     a {
-      color: #7a2c2c;
+      color: #621c1c;
     }
   </style>
 </head>
@@ -78,28 +122,40 @@
     <h1>Wallace Heritage Gloves</h1>
     <p>Heroes Get Remembered, Legends Never Die</p>
   </header>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <main>
-    <section>
+    <section id="services">
       <h2>Our Services</h2>
-      <div class="card">
-        <h3>Full Relace</h3>
-        <p>Complete relacing of your glove in any color. Includes cleaning and conditioning. <strong>$65</strong></p>
-      </div>
-      <div class="card">
-        <h3>Web Relace</h3>
-        <p>Relacing only the web area. <strong>$30</strong></p>
-      </div>
-      <div class="card">
-        <h3>Fingers or Heel Only</h3>
-        <p>Targeted relacing on fingers or heel. <strong>$25</strong></p>
-      </div>
-      <div class="card">
-        <h3>Clean & Condition</h3>
-        <p>Professional deep clean and leather conditioning. <strong>$20</strong></p>
+      <div class="grid">
+        <div class="card">
+          <h3>Full Relace</h3>
+          <p>Complete relacing of your glove in any color. Includes cleaning and conditioning.</p>
+          <strong>$65</strong>
+        </div>
+        <div class="card">
+          <h3>Web Relace</h3>
+          <p>Relacing only the web area.</p>
+          <strong>$30</strong>
+        </div>
+        <div class="card">
+          <h3>Fingers or Heel Only</h3>
+          <p>Targeted relacing on fingers or heel.</p>
+          <strong>$25</strong>
+        </div>
+        <div class="card">
+          <h3>Clean & Condition</h3>
+          <p>Professional deep clean and leather conditioning.</p>
+          <strong>$20</strong>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section id="how">
       <h2>How It Works</h2>
       <ol>
         <li>Fill out our <a href="files/WallaceHeritageGloveOrderForm.pdf" download>order form</a>.</li>
@@ -108,19 +164,21 @@
       </ol>
     </section>
 
-    <section>
+    <section id="gallery">
       <h2>Gallery</h2>
-      <div class="card">
-        <img src="images/example1.jpg" alt="Before and after relace">
-        <p>Before and After: Full Restoration</p>
-      </div>
-      <div class="card">
-        <img src="images/example2.jpg" alt="Cleaned and conditioned glove">
-        <p>Deep Clean + Conditioning</p>
+      <div class="grid">
+        <div class="card">
+          <img src="images/example1.jpg" alt="Before and after relace">
+          <p>Before and After: Full Restoration</p>
+        </div>
+        <div class="card">
+          <img src="images/example2.jpg" alt="Cleaned and conditioned glove">
+          <p>Deep Clean + Conditioning</p>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact Us</h2>
       <form>
         <input type="text" placeholder="Your Name" required>
