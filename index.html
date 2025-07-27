@@ -6,15 +6,22 @@
   <title>Wallace Heritage Gloves</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --maroon: #7a2c2c;
+      --deep-maroon: #4e1b1b;
+      --accent: #ffd9b3;
+      --background: #f9f6f1;
+      --text: #2d1f1f;
+    }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #fdf9f4;
-      color: #2d1f1f;
+      background-color: var(--background);
+      color: var(--text);
       margin: 0;
       padding: 0;
     }
     header {
-      background: linear-gradient(rgba(98,28,28,0.9), rgba(98,28,28,0.9)), url('images/banner-texture.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(122, 44, 44, 0.9), rgba(122, 44, 44, 0.9)), url('images/banner-texture.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -35,7 +42,7 @@
       font-size: 1.1em;
     }
     nav {
-      background-color: #471111;
+      background-color: var(--deep-maroon);
       display: flex;
       justify-content: center;
       padding: 12px;
@@ -51,7 +58,7 @@
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #ffd9b3;
+      color: var(--accent);
     }
     main {
       padding: 60px 20px;
@@ -67,9 +74,9 @@
       gap: 20px;
     }
     .card {
-      background-color: #fff;
+      background-color: white;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       padding: 20px;
       text-align: left;
       transition: transform 0.3s;
@@ -79,7 +86,7 @@
     }
     .card h3 {
       margin-top: 0;
-      color: #621c1c;
+      color: var(--maroon);
     }
     .card p {
       font-size: 0.95em;
@@ -103,17 +110,17 @@
       font-size: 1em;
     }
     input[type="submit"] {
-      background-color: #621c1c;
+      background-color: var(--maroon);
       color: white;
       border: none;
       cursor: pointer;
       transition: 0.3s;
     }
     input[type="submit"]:hover {
-      background-color: #8b2f2f;
+      background-color: var(--deep-maroon);
     }
     footer {
-      background-color: #471111;
+      background-color: var(--deep-maroon);
       color: white;
       text-align: center;
       padding: 30px 20px;
@@ -123,7 +130,7 @@
       margin-bottom: 10px;
     }
     footer nav a {
-      color: #ffd9b3;
+      color: var(--accent);
       margin: 0 10px;
       text-decoration: none;
     }
@@ -131,7 +138,7 @@
       text-decoration: underline;
     }
     a {
-      color: #621c1c;
+      color: var(--maroon);
     }
   </style>
 </head>
@@ -173,7 +180,6 @@
         </div>
       </div>
     </section>
-
     <section id="how">
       <h2>How It Works</h2>
       <ol>
@@ -182,7 +188,6 @@
         <li>We restore your glove and return it in 5–10 business days.</li>
       </ol>
     </section>
-
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="grid">
@@ -196,7 +201,6 @@
         </div>
       </div>
     </section>
-
     <section id="contact">
       <h2>Contact Us</h2>
       <form>
