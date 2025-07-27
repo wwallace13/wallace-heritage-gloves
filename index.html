@@ -14,10 +14,10 @@
       padding: 0;
     }
     header {
-      background-color: #621c1c;
+      background: linear-gradient(rgba(98,28,28,0.9), rgba(98,28,28,0.9)), url('images/banner-texture.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
     header img {
       width: 160px;
@@ -38,16 +38,20 @@
       background-color: #471111;
       display: flex;
       justify-content: center;
-      padding: 10px;
+      padding: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffd9b3;
     }
     main {
       padding: 60px 20px;
@@ -68,6 +72,10 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 20px;
       text-align: left;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.02);
     }
     .card h3 {
       margin-top: 0;
@@ -108,8 +116,19 @@
       background-color: #471111;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 0.9em;
+    }
+    footer nav {
+      margin-bottom: 10px;
+    }
+    footer nav a {
+      color: #ffd9b3;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer nav a:hover {
+      text-decoration: underline;
     }
     a {
       color: #621c1c;
@@ -191,6 +210,12 @@
     </section>
   </main>
   <footer>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <p>&copy; 2025 Wallace Heritage Gloves. All rights reserved.</p>
   </footer>
 </body>
