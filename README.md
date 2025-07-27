@@ -1,1 +1,0 @@
-# wallace-heritage-gloves
