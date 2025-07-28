@@ -22,38 +22,41 @@
       font-family: 'Roboto', sans-serif;
       background-color: var(--background);
       color: var(--text);
+      line-height: 1.6;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1602243017430-caa1381529f4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(122, 44, 44, 0.7), rgba(122, 44, 44, 0.8)), url('https://images.unsplash.com/photo-1602243017430-caa1381529f4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 120px 20px 80px;
+      padding: 140px 20px 100px;
       position: relative;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(122, 44, 44, 0.8);
-      z-index: 0;
-    }
-    header > * {
-      position: relative;
-      z-index: 1;
     }
     header img {
-      width: 180px;
-      margin-bottom: 10px;
+      width: 150px;
+      margin-bottom: 20px;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
-      margin: 10px 0;
+      font-size: 3.2em;
+      margin-bottom: 10px;
     }
     header p {
       font-style: italic;
-      font-size: 1.3em;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+    header a.button {
+      background-color: var(--accent);
+      color: var(--deep-maroon);
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+    }
+    header a.button:hover {
+      background-color: #f5c58a;
     }
     nav {
       position: sticky;
@@ -61,14 +64,14 @@
       background-color: var(--deep-maroon);
       display: flex;
       justify-content: center;
-      padding: 14px;
+      gap: 30px;
+      padding: 15px;
       z-index: 1000;
     }
     nav a {
       color: white;
-      margin: 0 20px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
       transition: color 0.3s;
     }
     nav a:hover {
@@ -76,23 +79,20 @@
     }
     main {
       max-width: 1200px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 0 20px;
-    }
-    section {
-      margin-bottom: 80px;
     }
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      margin-bottom: 30px;
+      font-size: 2.8em;
+      margin-bottom: 40px;
       text-align: center;
       color: var(--maroon);
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      gap: 40px;
     }
     .card {
       background-color: white;
@@ -100,35 +100,38 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
       overflow: hidden;
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
     }
     .card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
     .card h3 {
       margin: 1em 0 0.5em;
       color: var(--maroon);
+      font-size: 1.5em;
     }
     .card p {
-      padding: 0 15px 20px;
+      padding: 0 15px 25px;
+      font-size: 1em;
     }
     form {
       background-color: white;
-      padding: 30px;
+      padding: 35px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: auto;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: 0 auto;
     }
     input, textarea {
       width: 100%;
-      padding: 12px;
-      margin: 12px 0;
+      padding: 14px;
+      margin: 14px 0;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 1em;
@@ -148,8 +151,13 @@
       background-color: var(--deep-maroon);
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       font-size: 0.95em;
+      margin-top: 80px;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
   </style>
 </head>
@@ -158,6 +166,7 @@
     <img src="Wallace_Heritage_Gloves_Vectorized_Transparent.png" alt="Wallace Heritage Gloves Logo">
     <h1>Wallace Heritage Gloves</h1>
     <p>Heroes Get Remembered, Legends Never Die</p>
+    <a href="#services" class="button">View Services</a>
   </header>
   <nav>
     <a href="#services">Services</a>
@@ -166,10 +175,11 @@
     <a href="#contact">Contact</a>
   </nav>
   <main>
-    <!-- Sections omitted for brevity -->
+    <!-- Existing sections will follow here -->
   </main>
   <footer>
-    <p>&copy; 2025 Wallace Heritage Gloves — Madison, MS</p>
+    <p>&copy; 2025 Wallace Heritage Gloves — Madison, MS<br>
+    <a href="mailto:garrett.wallace72289@gmail.com">garrett.wallace72289@gmail.com</a> | <a href="tel:6012911863">601-291-1863</a></p>
   </footer>
 </body>
 </html>
