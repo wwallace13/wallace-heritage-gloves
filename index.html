@@ -2,102 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wallace Heritage Gloves</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Cormorant+Garamond:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #401104;
-      --highlight: #d4a776;
-      --light: #fdfaf6;
+    /* Placeholder: Additional styles would go here */
+    body {
+      font-family: 'Crimson Text', serif;
+      background-color: #f5f5dc;
     }
-    body { font-family: 'Inter', sans-serif; background: var(--light); color: #2a120c; }
-    h1, h2 { font-family: 'Lora', serif; color: var(--highlight); }
-    .btn { background: var(--primary); color: var(--light); padding: .75rem 1.5rem; border-radius: .5rem; }
-    .btn:hover { background: #2d0a02; }
+    h1, h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: #D4A776;
+    }
   </style>
 </head>
 <body>
-
-<header class="bg-primary text-light py-4 shadow">
-  <div class="container mx-auto flex justify-between items-center px-4">
-    <div class="flex items-center">
-      <img src="images/logo.png" alt="Logo" class="h-16 mr-2" />
-      <span class="text-2xl font-bold hidden sm:inline">Wallace Heritage Gloves</span>
-    </div>
-    <nav class="space-x-6 text-xl">
-      <a href="#home" class="hover:text-highlight">Home</a>
-      <a href="#services" class="hover:text-highlight">Services</a>
-      <a href="#gallery" class="hover:text-highlight">Gallery</a>
-      <a href="#testimonials" class="hover:text-highlight">Testimonials</a>
-      <a href="#contact" class="hover:text-highlight">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section id="home" style="background: url('images/hero_bw.jpg') center/cover no-repeat; height: 80vh;" class="text-white text-center flex items-center justify-center">
-  <div class="bg-black bg-opacity-60 p-8 rounded-lg">
-    <h1 class="text-6xl font-bold mb-4">Restore. Relace. Relive.</h1>
-    <p class="text-2xl max-w-xl mx-auto mb-6">Craftsmanship rooted in baseball history.</p>
-    <a href="#services" class="btn">See Our Services</a>
-  </div>
-</section>
-
-<section id="services" style="background: url('images/services_bw.jpg') center/cover no-repeat;" class="text-light py-20 px-6 text-center">
-  <h2 class="text-4xl mb-10">Our Services</h2>
-  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
-      <h3 class="text-2xl mb-2">Relace Only</h3>
-      <p>Premium leather lacing restoration.</p>
-      <p class="font-bold text-highlight mt-2">$110</p>
-    </div>
-    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
-      <h3 class="text-2xl mb-2">Full Restoration</h3>
-      <p>Cleaning, relacing, shaping & conditioning.</p>
-      <p class="font-bold text-highlight mt-2">$175</p>
-    </div>
-    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
-      <h3 class="text-2xl mb-2">Custom Lace Colors</h3>
-      <p>Modern flair for timeless gear.</p>
-      <p class="font-bold text-highlight mt-2">$30 Add-on</p>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" style="background: url('images/gallery_bw.jpg') center/cover no-repeat;" class="text-light py-20 px-6 text-center">
-  <h2 class="text-4xl mb-10">Before & After</h2>
-  <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-    <img src="images/vintage1.jpg" class="w-full rounded shadow-md" alt="Before glove">
-    <img src="images/vintage2.jpg" class="w-full rounded shadow-md" alt="After glove">
-  </div>
-</section>
-
-<section id="testimonials" style="background: url('images/testimonials_bw.jpg') center/cover no-repeat;" class="text-light py-20 px-6 text-center">
-  <h2 class="text-4xl mb-10">What Clients Say</h2>
-  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
-      <p class="italic">"Top-tier quality and nostalgia in one glove."</p>
-      <p class="mt-4 font-semibold text-highlight">– Mike</p>
-    </div>
-    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
-      <p class="italic">"Truly felt like handing my glove to a legend."</p>
-      <p class="mt-4 font-semibold text-highlight">– Sarah</p>
-    </div>
-    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
-      <p class="italic">"Takes you back to the golden age of baseball."</p>
-      <p class="mt-4 font-semibold text-highlight">– Jordan</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" style="background: url('images/contact_bw.jpg') center/cover no-repeat;" class="text-white py-20 px-6 text-center">
-  <div class="bg-black bg-opacity-60 p-6 rounded-lg inline-block">
-    <h2 class="text-4xl mb-6">Get in Touch</h2>
-    <p>Email: <a href="mailto:wallaceheritagegloves@gmail.com" class="text-highlight underline">wallaceheritagegloves@gmail.com</a></p>
-    <p class="mt-2">Instagram: <span class="text-highlight">@wallaceheritagegloves</span></p>
-  </div>
-</section>
-
+  <header class="bg-[#591F1F] text-white p-6">
+    <h1 class="text-4xl text-center">Wallace Heritage Gloves</h1>
+    <p class="text-center">Expert Relacing & Restoration</p>
+  </header>
+  <main class="p-6">
+    <h2 class="text-2xl text-center my-4">Welcome to Wallace Heritage Gloves</h2>
+    <p class="text-center">Your glove, restored with care and heritage.</p>
+  </main>
+  <footer class="bg-[#591F1F] text-white text-center p-4">
+    &copy; 2025 Wallace Heritage Gloves
+  </footer>
 </body>
 </html>
