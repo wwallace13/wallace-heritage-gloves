@@ -15,6 +15,9 @@
     }
     body {
       font-family: 'Inter', sans-serif;
+      background: url('images/paper_texture.jpg') repeat;
+      color: #2a120c;
+      font-family: 'Inter', sans-serif;
       background-color: var(--text-light);
       color: #2a120c;
     }
@@ -48,22 +51,28 @@
       </div>
       <nav>
         <ul class="flex gap-6 text-lg">
-          <li><a href="#home" class="hover:text-accent">Home</a></li>
-          <li><a href="#services" class="hover:text-accent">Services</a></li>
-          <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
-          <li><a href="#testimonials" class="hover:text-accent">Testimonials</a></li>
-          <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+          <li><a href="#home" class="hover:text-accent transition-colors duration-300">Home</a></li>
+          <li><a href="#services" class="hover:text-accent transition-colors duration-300">Services</a></li>
+          <li><a href="#gallery" class="hover:text-accent transition-colors duration-300">Gallery</a></li>
+          <li><a href="#testimonials" class="hover:text-accent transition-colors duration-300">Testimonials</a></li>
+          <li><a href="#contact" class="hover:text-accent transition-colors duration-300">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-<section id="home" class="text-white text-center py-24 px-4" style="background: url('images/logo.png') no-repeat center center; background-size: cover;">
+<section id="home" class="relative text-white text-center py-24 px-4" style="background: url('images/logo.png') center/contain no-repeat var(--primary); height: 80vh;">
+<div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-0"></div>
+<div class="absolute inset-0 z-0" style="background: url('images/grain_overlay.png') repeat; opacity: 0.15;"></div>
+<div class="relative z-10 px-4">
+<div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+<div class="relative z-10 px-4">
     <h1 class="text-5xl font-bold mb-4">Reviving Baseball History</h1>
     <p class="text-xl max-w-2xl mx-auto mb-6">Wallace Heritage Gloves brings vintage and modern gloves back to life with expert relacing, restoration, and craftsmanship.</p>
     <a href="#services" class="btn-primary">Explore Our Services</a>
-  </section>
+</div>
+</section>
 
   <!-- Services -->
   <section id="services" class="py-20 bg-text-light text-center px-6">
@@ -85,16 +94,20 @@
         <p class="font-bold text-accent">$30 Add-on</p>
       </div>
     </div>
-  </section>
+</div>
+</section>
 
   <!-- Gallery -->
-  <section id="gallery" class="py-20 bg-secondary text-white px-6">
-    <h2 class="text-4xl font-bold text-center mb-10">Before & After</h2>
-    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <img src="images/before1.jpg" class="rounded shadow-md" alt="Before glove restore">
-      <img src="images/after1.jpg" class="rounded shadow-md" alt="After glove restore">
-    </div>
-  </section>
+
+<section id="gallery" class="py-20 bg-secondary text-light px-6" style="background: url('images/paper_texture.jpg') repeat;">
+  <h2 class="text-4xl mb-10 text-center">Classic Glove Restorations</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <img src="images/vintage1.jpg" class="w-full rounded shadow-md" alt="Vintage Glove 1">
+    <img src="images/vintage2.jpg" class="w-full rounded shadow-md" alt="Vintage Glove 2">
+    <img src="images/vintage3.jpg" class="w-full rounded shadow-md" alt="Vintage Glove 3">
+    <img src="images/vintage4.jpg" class="w-full rounded shadow-md" alt="Vintage Glove 4">
+  </div>
+</section>
 
   <!-- Testimonials -->
   <section id="testimonials" class="py-20 bg-text-light text-center px-6">
@@ -113,13 +126,15 @@
         <p class="mt-4 font-semibold text-accent">– Jordan K.</p>
       </div>
     </div>
-  </section>
+</div>
+</section>
 
   <!-- Contact -->
   <section id="contact" class="py-20 bg-primary text-white text-center px-6">
     <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
     <p>Email: <a href="mailto:wallaceheritagegloves@gmail.com" class="underline text-accent">wallaceheritagegloves@gmail.com</a></p>
     <p class="mt-2">Instagram: <span class="text-accent">@wallaceheritagegloves</span></p>
-  </section>
+</div>
+</section>
 </body>
 </html>
