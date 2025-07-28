@@ -8,99 +8,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-bg: #401104;
-      --secondary-bg: #5a2b1a;
-      --accent-gold: #d4a776;
-      --text-light: #fdfaf6;
+      --primary: #401104;
+      --secondary: #5a2b1a;
+      --highlight: #d4a776;
+      --light: #fdfaf6;
     }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: url('images/paper_texture.jpg') repeat;
-      color: #2a120c;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--text-light);
-      color: #2a120c;
-    }
-    h1, h2 {
-      font-family: 'Lora', serif;
-      color: var(--accent-gold);
-    }
-    .bg-primary { background-color: var(--primary-bg); }
-    .bg-secondary { background-color: var(--secondary-bg); }
-    .text-accent { color: var(--accent-gold); }
-    .btn-primary {
-      background-color: var(--primary-bg);
-      color: var(--text-light);
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    .btn-primary:hover {
-      background-color: #2d0a02;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: #2a120c; }
+    h1, h2 { font-family: 'Lora', serif; color: var(--highlight); }
+    .btn { background: var(--primary); color: var(--light); padding: .75rem 1.5rem; border-radius: .5rem; }
+    .btn:hover { background: #2d0a02; }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="bg-primary text-white shadow-lg">
-    <div class="container mx-auto flex items-center justify-between px-4 py-4">
-      <div class="flex items-center">
-        <img src="images/logo.png" alt="Wallace Heritage Gloves" class="h-14 mr-4" />
-        <span class="text-2xl font-bold hidden sm:inline">Wallace Heritage Gloves</span>
-      </div>
-      <nav>
-        <ul class="flex gap-6 text-lg">
-          <li><a href="#home" class="hover:text-accent transition-colors duration-300">Home</a></li>
-          <li><a href="#services" class="hover:text-accent transition-colors duration-300">Services</a></li>
-          <li><a href="#gallery" class="hover:text-accent transition-colors duration-300">Gallery</a></li>
-          <li><a href="#testimonials" class="hover:text-accent transition-colors duration-300">Testimonials</a></li>
-          <li><a href="#contact" class="hover:text-accent transition-colors duration-300">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-<section id="home" class="relative text-white text-center py-24 px-4" style="background: url('images/logo.png') center/contain no-repeat var(--primary); height: 80vh;">
-<div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-0"></div>
-<div class="absolute inset-0 z-0" style="background: url('images/grain_overlay.png') repeat; opacity: 0.15;"></div>
-<div class="relative z-10 px-4">
-<div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
-<div class="relative z-10 px-4">
-    <h1 class="text-5xl font-bold mb-4">Reviving Baseball History</h1>
-    <p class="text-xl max-w-2xl mx-auto mb-6">Wallace Heritage Gloves brings vintage and modern gloves back to life with expert relacing, restoration, and craftsmanship.</p>
-    <a href="#services" class="btn-primary">Explore Our Services</a>
-</div>
+<!-- Header -->
+<header class="bg-primary text-light py-4 shadow">
+  <div class="container mx-auto flex justify-between items-center px-4">
+    <div class="flex items-center">
+      <img src="images/logo.png" alt="Logo" class="h-16 mr-2" />
+      <span class="text-2xl font-bold hidden sm:inline">Wallace Heritage Gloves</span>
+    </div>
+    <nav class="space-x-6 text-xl">
+      <a href="#home" class="hover:text-highlight">Home</a>
+      <a href="#services" class="hover:text-highlight">Services</a>
+      <a href="#gallery" class="hover:text-highlight">Gallery</a>
+      <a href="#testimonials" class="hover:text-highlight">Testimonials</a>
+      <a href="#contact" class="hover:text-highlight">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" style="background: url('images/logo.png') center/cover no-repeat; height: 80vh;" class="text-white text-center flex items-center justify-center">
+  <div class="bg-black bg-opacity-60 p-8 rounded-lg">
+    <h1 class="text-5xl font-bold mb-4">Restore. Relace. Relive.</h1>
+    <p class="text-xl max-w-xl mx-auto mb-6">Premium baseball glove restoration services rooted in heritage and delivered with precision.</p>
+    <a href="#services" class="btn">See Our Services</a>
+  </div>
 </section>
 
-  <!-- Services -->
-  <section id="services" class="py-20 bg-text-light text-center px-6">
-    <h2 class="text-4xl font-bold mb-10">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="border p-6 rounded-xl bg-white shadow">
-        <h3 class="text-xl font-semibold mb-2">Relace Only</h3>
-        <p class="mb-3">Premium leather laces installed using traditional patterns.</p>
-        <p class="font-bold text-accent">$110</p>
-      </div>
-      <div class="border p-6 rounded-xl bg-white shadow">
-        <h3 class="text-xl font-semibold mb-2">Full Restoration</h3>
-        <p class="mb-3">Includes deep cleaning, relacing, conditioning, and shaping.</p>
-        <p class="font-bold text-accent">$175</p>
-      </div>
-      <div class="border p-6 rounded-xl bg-white shadow">
-        <h3 class="text-xl font-semibold mb-2">Custom Lace Colors</h3>
-        <p class="mb-3">Choose from dozens of colors to personalize your glove.</p>
-        <p class="font-bold text-accent">$30 Add-on</p>
-      </div>
+<!-- Services -->
+<section id="services" style="background: url('images/vintage1.jpg') center/cover no-repeat;" class="text-light py-20 px-6 text-center">
+  <h2 class="text-4xl mb-10">Our Services</h2>
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
+      <h3 class="text-2xl mb-2">Relace Only</h3>
+      <p>Precision re-lacing with premium leather lace.</p>
+      <p class="font-bold text-highlight mt-2">$110</p>
     </div>
-</div>
+    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
+      <h3 class="text-2xl mb-2">Full Restoration</h3>
+      <p>Cleaning, conditioning, shaping, and relace.</p>
+      <p class="font-bold text-highlight mt-2">$175</p>
+    </div>
+    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
+      <h3 class="text-2xl mb-2">Custom Lace Color</h3>
+      <p>Color options for full customization of your glove.</p>
+      <p class="font-bold text-highlight mt-2">$30 Add-on</p>
+    </div>
+  </div>
 </section>
 
-  <!-- Gallery -->
-
-<section id="gallery" class="py-20 bg-secondary text-light px-6" style="background: url('images/paper_texture.jpg') repeat;">
-  <h2 class="text-4xl mb-10 text-center">Classic Glove Restorations</h2>
+<!-- Gallery -->
+<section id="gallery" style="background: url('images/vintage2.jpg') center/cover no-repeat;" class="text-white py-20 px-6 text-center">
+  <h2 class="text-4xl mb-10">Classic Glove Restorations</h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
     <img src="images/vintage1.jpg" class="w-full rounded shadow-md" alt="Vintage Glove 1">
     <img src="images/vintage2.jpg" class="w-full rounded shadow-md" alt="Vintage Glove 2">
@@ -109,32 +80,33 @@
   </div>
 </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="py-20 bg-text-light text-center px-6">
-    <h2 class="text-4xl font-bold mb-10">What Our Clients Say</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-white p-6 shadow rounded-xl">
-        <p class="italic">"Incredible detail. My glove looks like it did when I was a kid!"</p>
-        <p class="mt-4 font-semibold text-accent">– Mike R.</p>
-      </div>
-      <div class="bg-white p-6 shadow rounded-xl">
-        <p class="italic">"Fast, friendly, and beautiful work. Highly recommend."</p>
-        <p class="mt-4 font-semibold text-accent">– Sarah T.</p>
-      </div>
-      <div class="bg-white p-6 shadow rounded-xl">
-        <p class="italic">"Wallace Heritage Gloves brought my gamer back to life."</p>
-        <p class="mt-4 font-semibold text-accent">– Jordan K.</p>
-      </div>
+<!-- Testimonials -->
+<section id="testimonials" style="background: url('images/vintage3.jpg') center/cover no-repeat;" class="text-light py-20 px-6 text-center">
+  <h2 class="text-4xl mb-10">What Clients Say</h2>
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
+      <p class="italic">"My childhood glove looks better than ever!"</p>
+      <p class="mt-4 font-semibold text-highlight">– Mike</p>
     </div>
-</div>
+    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
+      <p class="italic">"Professional. Fast turnaround. Highly recommended."</p>
+      <p class="mt-4 font-semibold text-highlight">– Sarah</p>
+    </div>
+    <div class="p-6 bg-black bg-opacity-60 rounded-lg shadow">
+      <p class="italic">"Vintage feel, modern quality workmanship."</p>
+      <p class="mt-4 font-semibold text-highlight">– Jordan</p>
+    </div>
+  </div>
 </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-primary text-white text-center px-6">
-    <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
-    <p>Email: <a href="mailto:wallaceheritagegloves@gmail.com" class="underline text-accent">wallaceheritagegloves@gmail.com</a></p>
-    <p class="mt-2">Instagram: <span class="text-accent">@wallaceheritagegloves</span></p>
-</div>
+<!-- Contact -->
+<section id="contact" style="background: url('images/vintage4.jpg') center/cover no-repeat;" class="text-white py-20 px-6 text-center">
+  <div class="bg-black bg-opacity-60 p-6 rounded-lg inline-block">
+    <h2 class="text-4xl mb-6">Contact Us</h2>
+    <p>Email: <a href="mailto:wallaceheritagegloves@gmail.com" class="text-highlight underline">wallaceheritagegloves@gmail.com</a></p>
+    <p class="mt-2">Instagram: <span class="text-highlight">@wallaceheritagegloves</span></p>
+  </div>
 </section>
+
 </body>
 </html>
