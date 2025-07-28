@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallace Heritage Gloves - Expert Relacing & Restoration</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Crimson Text for body, Cormorant Garamond for H1/H2, Old Standard TT for H3-H6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Cormorant+Garamond:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS variables for the color palette (from Wallace Heritage Gloves branding) */
+        :root {
+            --primary-bg: #591F1F; /* Deep reddish-brown */
+            --secondary-bg: #8C543B; /* Lighter, textured brown */
+            --accent-gold: #D4A776; /* Warm, golden beige */
+            --accent-red: #B22222; /* Muted red for CTAs */
+            --text-dark: #333333; /* Dark brown/grey for body text */
+            --text-light: #F5F5DC; /* Off-white/cream for contrast on dark backgrounds */
+        }
+
+        body {
+            font-family: 'Crimson Text', serif; /* Updated body font for vintage feel */
+            color: var(--text-dark);
+            background-color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        h1, h2 {
+            font-family: 'Cormorant Garamond', serif; /* Updated heading font for vintage feel */
+            color: var(--accent-gold);
+        }
+
+        h3, h4, h5, h6 {
+            font-family: 'Old Standard TT', serif; /* Retained for classic feel */
+            color: var(--accent-gold);
+        }
+
+        /* Tailwind custom colors */
+        .bg-primary-bg { background-color: var(--primary-bg); }
+        .bg-secondary-bg { background-color: var(--secondary-bg); }
+        .text-accent-gold { color: var(--accent-gold); }
+        .text-accent-red { color: var(--accent-red); }
+        .text-text-dark { color: var(--text-dark); }
+        .text-text-light { color: var(--text-light); }
+        .border-accent-gold { border-color: var(--accent-gold); }
+        .border-accent-red { border-color: var(--accent-red); }
+
+        /* Custom button style for primary CTA */
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: var(--text-light);
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem; /* Rounded corners */
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Slightly more pronounced shadow */
+        }
+        .btn-primary:hover {
+            background-color: #9A1F1F;
+            box-shadow: 3px 3px 7px rgba(0,0,0,0.4);
+        }
+
+        /* Hero section background image */
+        .hero-background {
+            background-image: url('https://placehold.co/1920x800/8C543B/D4A776?text=Baseball+Glove+Hero+Image'); /* Themed placeholder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Service and gallery image styling */
+        .service-image img, .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .service-image, .gallery-image {
+            width: 100%;
+            height: 180px; /* Fixed height for consistency */
+            background-color: var(--secondary-bg); /* Fallback/loading background */
+            display: flex; /* To center placeholder text if image fails */
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 0.5rem;
+            overflow: hidden; /* Ensure image doesn't spill out of rounded corners */
+        }
+
+
+        .product-card {
+            background-color: white;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid var(--accent-gold); /* Added border for definition */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* General section styling for more depth */
+        section:not(#home) { /* Apply to all sections except hero */
+            padding: 3rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        main .container {
+            max-width: 1024px; /* Slightly wider main content area */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-primary-bg text-text-light py-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <!-- Logo Placeholder -->
+            <div class="flex items-center mb-4 md:mb-0">
+                <a href="#home">
+                    <img src="https://placehold.co/250x60/591F1F/D4A776?text=Wallace+Heritage+Gloves" alt="Wallace Heritage Gloves Logo" class="h-12 w-auto mr-3">
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg">
+                    <li><a href="#home" class="hover:text-accent-gold transition duration-300">Home</a></li>
+                    <li><a href="#services" class="hover:text-accent-gold transition duration-300">Services</a></li>
+                    <li><a href="#process" class="hover:text-accent-gold transition duration-300">The Process</a></li>
+                    <li><a href="#gallery" class="hover:text-accent-gold transition duration-300">Gallery</a></li>
+                    <li><a href="#about" class="hover:text-accent-gold transition duration-300">About Us</a></li>
+                    <li><a href="#faq" class="hover:text-accent-gold transition duration-300">FAQ's</a></li>
+                    <li><a href="#contact" class="hover:text-accent-gold transition duration-300">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-background text-text-light py-24 md:py-32 text-center rounded-b-xl shadow-inner mx-auto max-w-7xl mt-4">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                    Restore the Legacy. Reclaim the Game.
+                </h1>
+                <a href="#services" class="btn-primary inline-block">
+                    Explore Our Services
+                </a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="container mx-auto px-4 py-12 text-center bg-text-light rounded-xl shadow-lg border border-secondary-bg" id="why-choose-us">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Wallace Heritage Gloves?</h2>
+            <p class="text-lg max-w-3xl mx-auto">
+                At Wallace Heritage Gloves, we are dedicated to preserving the life and performance of your most cherished baseball and softball gloves. Our expert craftsmanship ensures your glove returns to you in prime condition, ready for countless more seasons. We combine traditional techniques with premium materials to deliver unparalleled restoration.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+                <!-- Service Highlight 1 -->
+                <div class="bg-secondary-bg text-text-light p-6 rounded-lg shadow-md text-center border border-accent-gold">
+                    <div class="text-accent-gold text-5xl mb-4">⚾</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-2">Expert Relacing</h3>
+                    <p class="text-sm">Precision hand-lacing with durable, professional-grade rawhide.</p>
+                </div>
+                <!-- Service Highlight 2 -->
+                <div class="bg-secondary-bg text-text-light p-6 rounded-lg shadow-md text-center border border-accent-gold">
+                    <div class="text-accent-gold text-5xl mb-4">✨</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-2">Thorough Conditioning</h3>
+                    <p class="text-sm">Deep cleaning and conditioning to revitalize leather and restore suppleness.</p>
+                </div>
+                <!-- Service Highlight 3 -->
+                <div class="bg-secondary-bg text-text-light p-6 rounded-lg shadow-md text-center border border-accent-gold">
+                    <div class="text-accent-gold text-5xl mb-4">🛠️</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-2">Quality Materials</h3>
+                    <p class="text-sm">Only the finest laces and conditioners used for lasting results.</p>
+                </div>
+                <!-- Service Highlight 4 -->
+                <div class="bg-secondary-bg text-text-light p-6 rounded-lg shadow-md text-center border border-accent-gold">
+                    <div class="text-accent-gold text-5xl mb-4">🏆</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-2">Game-Ready Return</h3>
+                    <p class="text-sm">Your glove returned shaped, conditioned, and ready for the field.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services & Prices Section -->
+        <section id="services" class="container mx-auto px-4 py-12 bg-text-light rounded-xl shadow-lg border border-secondary-bg">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-primary-bg">Our Expert Glove Services & Pricing</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-10">
+                Transparent pricing for our top-tier restoration and care services.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                <!-- Service Card 1: Full Glove Relacing Service -->
+                <div class="product-card">
+                    <div class="service-image">
+                        <img src="https://placehold.co/300x180/8C543B/D4A776?text=Full+Relace" alt="Full Relace Service">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-text-dark mb-2">Full Glove Relacing Service</h3>
+                        <p class="text-sm text-text-dark mb-3">Complete replacement of all laces, cleaning, and conditioning.</p>
+                        <p class="text-lg text-accent-red font-bold mb-4">$110.00</p>
+                        <a href="#contact" class="btn-primary text-center mt-auto">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Targeted Relacing & Repair -->
+                <div class="product-card">
+                    <div class="service-image">
+                        <img src="https://placehold.co/300x180/8C543B/D4A776?text=Targeted+Repair" alt="Targeted Relacing & Repair">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-text-dark mb-2">Targeted Relacing & Repair</h3>
+                        <p class="text-sm text-text-dark mb-3">Replacement of specific broken laces or minor stitching repairs.</p>
+                        <p class="text-lg text-accent-red font-bold mb-4">Starting at $50.00</p>
+                        <a href="#contact" class="btn-primary text-center mt-auto">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Professional Cleaning & Conditioning -->
+                <div class="product-card">
+                    <div class="service-image">
+                        <img src="https://placehold.co/300x180/8C543B/D4A776?text=Cleaning+Conditioning" alt="Professional Cleaning & Conditioning">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-text-dark mb-2">Professional Cleaning & Conditioning</h3>
+                        <p class="text-sm text-text-dark mb-3">Deep cleaning and conditioning to restore leather's suppleness.</p>
+                        <p class="text-lg text-accent-red font-bold mb-4">$40.00</p>
+                        <a href="#contact" class="btn-primary text-center mt-auto">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Professional Glove Break-In Service -->
+                <div class="product-card">
+                    <div class="service-image">
+                        <img src="https://placehold.co/300x180/8C543B/D4A776?text=Glove+Break-In" alt="Professional Glove Break-In Service">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-text-dark mb-2">Professional Glove Break-In Service</h3>
+                        <p class="text-sm text-text-dark mb-3">Expert shaping and breaking-in for optimal pocket formation.</p>
+                        <p class="text-lg text-accent-red font-bold mb-4">$75.00</p>
+                        <a href="#contact" class="btn-primary text-center mt-auto">Get Started</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- The Process Section -->
+        <section id="process" class="bg-secondary-bg text-text-light p-8 rounded-xl shadow-lg mb-12 container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Our Simple Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-10">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-lg border border-accent-gold bg-primary-bg text-text-light shadow-md">
+                    <div class="text-accent-gold text-4xl font-bold mb-3">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Select Your Service</h3>
+                    <p class="text-sm">Choose from our range of services or contact us for a custom quote.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="p-6 rounded-lg border border-accent-gold bg-primary-bg text-text-light shadow-md">
+                    <div class="text-accent-gold text-4xl font-bold mb-3">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Ship Your Glove</h3>
+                    <p class="text-sm">Securely package and send your glove to our workshop. We'll confirm receipt!</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="p-6 rounded-lg border border-accent-gold bg-primary-bg text-text-light shadow-md">
+                    <div class="text-accent-gold text-4xl font-bold mb-3">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Receive & Play!</h3>
+                    <p class="text-sm">Your expertly restored glove is returned, ready for the field.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#contact" class="btn-primary inline-block">Start Your Restoration</a>
+            </div>
+        </section>
+
+        <!-- Before & After / Gallery Section -->
+        <section id="gallery" class="container mx-auto px-4 py-12 bg-text-light rounded-xl shadow-lg border border-secondary-bg">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-primary-bg">See the Transformation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-10">
+                <!-- Before & After Pair 1 -->
+                <div class="flex flex-col md:flex-row gap-4 items-center product-card p-4">
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=Before+Image" alt="Before Relace">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=After+Image" alt="After Relace">
+                    </div>
+                </div>
+                <!-- Before & After Pair 2 -->
+                <div class="flex flex-col md:flex-row gap-4 items-center product-card p-4">
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=Before+Image" alt="Before Relace">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=After+Image" alt="After Relace">
+                    </div>
+                </div>
+                <!-- Before & After Pair 3 -->
+                <div class="flex flex-col md:flex-row gap-4 items-center product-card p-4">
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=Before+Image" alt="Before Relace">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=After+Image">
+                    </div>
+                </div>
+                <!-- Before & After Pair 4 -->
+                <div class="flex flex-col md:flex-row gap-4 items-center product-card p-4">
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=Before+Image">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://placehold.co/300x200/8C543B/D4A776?text=After+Image">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#contact" class="btn-primary inline-block">Request Your Transformation</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-primary-bg text-text-light p-8 rounded-xl shadow-lg mb-12 container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">About Wallace Heritage Gloves</h2>
+            <div class="max-w-4xl mx-auto text-lg text-center">
+                <p class="mb-4">
+                    Founded on a passion for baseball and a deep respect for the craftsmanship of a well-made glove, Wallace Heritage Gloves is dedicated to extending the life and legacy of your most trusted equipment. We believe every glove has a story, and we're here to help it continue.
+                </p>
+                <p>
+                    Our commitment to quality, meticulous attention to detail, and use of premium materials ensure that each glove we touch is returned not just relaced, but revitalized, ready for many more seasons of catches, throws, and memories.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container mx-auto px-4 py-12 bg-text-light rounded-xl shadow-lg border border-secondary-bg">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-primary-bg">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-secondary-bg">
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">How long does the relacing process take?</h3>
+                    <p class="text-md text-text-dark">
+                        Our typical turnaround time for a full relace is 5-7 business days from the day we receive your glove. Partial relaces may be quicker.
+                    </p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-secondary-bg">
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">What types of laces do you use?</h3>
+                    <p class="text-md text-text-dark">
+                        We use only professional-grade rawhide laces, known for their durability and strength. We offer a variety of standard colors.
+                    </p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-secondary-bg">
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">How do I ship my glove to you?</h3>
+                    <p class="text-md text-text-dark">
+                        Once you select your service, we'll provide detailed instructions on how to securely package and ship your glove to our workshop.
+                    </p>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-secondary-bg">
+                    <h3 class="text-xl font-semibold text-text-dark mb-2">Do you offer a warranty on your work?</h3>
+                    <p class="text-md text-text-dark">
+                        Yes, we stand by our craftsmanship. All relacing services come with a 90-day warranty on the laces installed.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="bg-secondary-bg text-text-light p-8 rounded-xl shadow-lg mb-12 container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-8">
+                Have a question about our services or need a custom quote? We'd love to hear from you!
+            </p>
+            <div class="max-w-xl mx-auto">
+                <p class="mb-4 text-xl text-center">Email: <a href="mailto:garrett.wallace72289@gmail.com" class="text-accent-gold hover:underline">garrett.wallace72289@gmail.com</a></p>
+                <p class="mb-6 text-xl text-center">Phone: 601-291-1863</p>
+
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-text-light text-sm font-bold mb-2">Name:</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-text-dark leading-tight focus:outline-none focus:shadow-outline bg-text-light border-accent-gold" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-text-light text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-text-dark leading-tight focus:outline-none focus:shadow-outline bg-text-light border-accent-gold" placeholder="your@example.com" required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-text-light text-sm font-bold mb-2">Subject:</label>
+                        <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-text-dark leading-tight focus:outline-none focus:shadow-outline bg-text-light border-accent-gold" placeholder="Subject of your inquiry">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-text-light text-sm font-bold mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-text-dark leading-tight focus:outline-none focus:shadow-outline bg-text-light border-accent-gold" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                </form>
+                <p class="text-sm mt-4 text-center">Note: This form is for demonstration. A backend service is required to send messages.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary-bg text-text-light py-8 rounded-t-xl shadow-inner mx-auto max-w-7xl mt-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <!-- Footer Navigation -->
+            <nav class="mb-6 md:mb-0">
+                <ul class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-md">
+                    <li><a href="#home" class="hover:text-accent-gold transition duration-300">Home</a></li>
+                    <li><a href="#services" class="hover:text-accent-gold transition duration-300">Services</a></li>
+                    <li><a href="#process" class="hover:text-accent-gold transition duration-300">The Process</a></li>
+                    <li><a href="#gallery" class="hover:text-accent-gold transition duration-300">Gallery</a></li>
+                    <li><a href="#about" class="hover:text-accent-gold transition duration-300">About Us</a></li>
+                    <li><a href="#faq" class="hover:text-accent-gold transition duration-300">FAQ's</a></li>
+                    <li><a href="#contact" class="hover:text-accent-gold transition duration-300">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact Info & Social Media -->
+            <div class="text-center md:text-right">
+                <p class="mb-2">Email: <a href="mailto:garrett.wallace72289@gmail.com" class="hover:text-accent-gold">garrett.wallace72289@gmail.com</a></p>
+                <p class="mb-4">Phone: 601-291-1863</p>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <!-- Social Media Icons (placeholders) -->
+                    <a href="#" class="text-text-light hover:text-accent-gold transition duration-300 text-2xl">📸</a> <!-- Instagram -->
+                    <a href="#" class="text-text-light hover:text-accent-gold transition duration-300 text-2xl">📘</a> <!-- Facebook -->
+                    <a href="#" class="text-text-light hover:text-accent-gold transition duration-300 text-2xl">🐦</a> <!-- Twitter/X -->
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm mt-6">
+            <p>&copy; 2025 Wallace Heritage Gloves. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
