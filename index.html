@@ -1,13 +1,116 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wallace Heritage Gloves</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
-  <style>/* truncated for brevity in zip generation */</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallace Heritage Gloves - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Wallace Heritage Gloves - Expert baseball glove relacing, restoration, and conditioning.">
+    <meta name="keywords" content="baseball glove relacing, glove repair, Wallace Heritage Gloves">
+    <style>
+        :root {
+            --primary-bg: #591F1F;
+            --secondary-bg: #8C543B;
+            --accent-gold: #D4A776;
+            --accent-red: #B22222;
+            --text-dark: #333333;
+            --text-light: #F5F5DC;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        h1, h2 {
+            font-family: 'Lora', serif;
+            color: var(--accent-gold);
+        }
+        h3, h4, h5, h6 {
+            font-family: 'Old Standard TT', serif;
+            color: var(--accent-gold);
+        }
+        .bg-primary-bg { background-color: var(--primary-bg); }
+        .bg-secondary-bg { background-color: var(--secondary-bg); }
+        .text-accent-gold { color: var(--accent-gold); }
+        .text-accent-red { color: var(--accent-red); }
+        .text-text-dark { color: var(--text-dark); }
+        .text-text-light { color: var(--text-light); }
+        .border-accent-gold { border-color: var(--accent-gold); }
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: var(--text-light);
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #9A1F1F;
+        }
+        .hero-background {
+            background-image: url('images/hero-glove.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
-<body>
-  <!-- Header, Nav, Main, Footer (already validated) -->
+<body class="antialiased">
+    <header class="bg-primary-bg text-text-light py-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="images/logo.png" alt="Wallace Heritage Gloves Logo" class="h-16 w-auto mr-3">
+            </div>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg">
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Services</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">The Process</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">FAQ's</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-background text-text-light py-24 md:py-32 text-center rounded-b-xl shadow-inner mx-auto max-w-7xl mt-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Preserving the Legacy of Your Game</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-old-standard-tt">Professional glove relacing and restoration tailored to bring vintage and modern gloves back to life.</p>
+            <a href="#" class="btn-primary inline-block">Request a Quote</a>
+        </div>
+    </section>
+
+    <footer class="bg-primary-bg text-text-light py-8 rounded-t-xl shadow-inner mx-auto max-w-7xl mt-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <nav class="mb-6 md:mb-0">
+                <ul class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-md">
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Services</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">The Process</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">FAQ's</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-300">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="text-center md:text-right">
+                <p class="mb-2">Email: <a href="mailto:wallaceheritagegloves@gmail.com" class="hover:text-accent-gold">wallaceheritagegloves@gmail.com</a></p>
+                <p class="mb-4">Phone: (555) 123-4567</p>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="#" class="text-text-light hover:text-accent-gold transition duration-300 text-2xl">📸</a>
+                    <a href="#" class="text-text-light hover:text-accent-gold transition duration-300 text-2xl">📘</a>
+                    <a href="#" class="text-text-light hover:text-accent-gold transition duration-300 text-2xl">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm mt-6">
+            <p>&copy; 2025 Wallace Heritage Gloves. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
